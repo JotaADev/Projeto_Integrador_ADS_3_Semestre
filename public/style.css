@@ -21,6 +21,7 @@ main::-webkit-scrollbar-thumb {
 
 main {
     height: 70%;
+    margin-top: 0;
     overflow-y: scroll;
     text-align: justify;
     padding: 2rem;
@@ -28,6 +29,7 @@ main {
 
 @media (max-width: 859px) {
     main {
-        height: 80%;
+        height: 75%;
+        margin-top: 5%;
     }
 }
