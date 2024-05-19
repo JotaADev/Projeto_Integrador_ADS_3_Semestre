@@ -7,11 +7,6 @@
     color: #363636;
 }
 
-body {
-    height: 100vh;
-    overflow-y: hidden;
-}
-
 main::-webkit-scrollbar {
     width: 4px;
 }
@@ -25,7 +20,7 @@ main::-webkit-scrollbar-thumb {
 }
 
 main {
-    height: 70vh;
+    height: 70%;
     overflow-y: scroll;
     text-align: justify;
     padding: 2rem;
@@ -33,6 +28,6 @@ main {
 
 @media (max-width: 859px) {
     main {
-        height: 80vh;
+        height: 80%;
     }
 }

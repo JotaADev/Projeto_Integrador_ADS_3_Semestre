@@ -17,5 +17,13 @@
     <body>
         <noscript>Você precisa ativar o JavaScript para rodar este app.</noscript>
         <div id="root"></div>
+        <script>
+            function setFullHeight() {
+                const element = document.getElementById('root');
+                element.style.height = `${window.innerHeight}px`;
+            }
+            window.addEventListener('resize', setFullHeight);
+            window.addEventListener('load', setFullHeight);
+          </script>
     </body>
 </html>
