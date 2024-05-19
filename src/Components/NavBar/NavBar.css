@@ -1,0 +1,26 @@
+nav {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #C08497;
+}
+
+nav a.promotions {
+    color: #FF0000;
+}
+
+@media (max-width: 859px) {
+    nav {
+        display: none;
+    }
+}

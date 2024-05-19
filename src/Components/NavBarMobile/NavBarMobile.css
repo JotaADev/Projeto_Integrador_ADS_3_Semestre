@@ -1,0 +1,35 @@
+aside {
+    display: none;
+}
+
+@media (max-width: 859px) {
+    aside {
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        background-color: #FFFFFF;
+        width: 100%;
+        height: 100%;
+        padding-top: 150px;
+        z-index: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.show {
+    display: flex;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.close {
+    display: none;
+}

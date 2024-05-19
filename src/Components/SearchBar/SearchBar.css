@@ -1,0 +1,22 @@
+.searchbar {
+    border: 1px solid #363636;
+    padding: 4px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+}
+
+.searchinput {
+    width: 100%;
+    height: 30px;
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 859px) {
+    .searchbar {
+        width: 90%;
+    }
+}
