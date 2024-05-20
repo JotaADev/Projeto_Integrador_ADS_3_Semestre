@@ -8,15 +8,7 @@
 }
 
 main::-webkit-scrollbar {
-    width: 4px;
-}
-
-main::-webkit-scrollbar-track {
-    background: #FFFFFF;
-}
-
-main::-webkit-scrollbar-thumb {
-    background-color: #C08497;
+    width: 0;
 }
 
 main {
@@ -24,7 +16,10 @@ main {
     margin-top: 0;
     overflow-y: scroll;
     text-align: justify;
-    padding: 2rem;
+}
+
+main p {
+    padding: 0 1.5rem;
 }
 
 @media (max-width: 859px) {
