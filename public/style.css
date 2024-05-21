@@ -16,10 +16,7 @@ main {
     margin-top: 0;
     overflow-y: scroll;
     text-align: justify;
-}
-
-main p {
-    padding: 0 1.5rem;
+    padding: 1.5rem;
 }
 
 @media (max-width: 859px) {

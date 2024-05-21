@@ -36,3 +36,28 @@ export function getBanners() {
         });
     });
 }
+
+//Recuperando Banners Mobile:
+export function getBannersMobile() {
+    return new Promise((resolve, reject) => {
+        let result = [];
+        const storage = getStorage();
+        const listRef = ref(storage, 'banners-mobile');
+
+        listAll(listRef).then((res) => {
+            let promises = res.items.map((itemRef) => {
+                return getDownloadURL(ref(storage, itemRef.fullPath)).then((url) => {
+                    result.push(url);
+                });
+            });
+
+            Promise.all(promises).then(() => {
+                resolve(result);
+            }).catch((error) => {
+                reject(error);
+            });
+        }).catch((error) => {
+            reject(error);
+        });
+    });
+}
