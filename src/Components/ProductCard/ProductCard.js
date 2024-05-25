@@ -1,15 +1,15 @@
 import React from 'react';
 import './ProductCard.css';
 
-const ProductCard = () => {
+const ProductCard = ({img, productName, oldPrice, price, payment}) => {
     return (
         <div className='productcard'>
-            <img src='./19924gg.png'/>
-            <p>Buquê de 7 Girassóis Te Adoro</p>
+            <img src={img}/>
+            <p>{productName}</p>
             <div>
-                <p className='oldprice'>De R$ 229,90</p>
-                <p>R$ 160,93</p>
-                <p className='payment'>3x de R$ 53,30</p>
+                <p className='oldprice'>De {oldPrice}</p>
+                <p>R$ {price}</p>
+                <p className='payment'>3x de R$ {payment}</p>
             </div>
             <button>Comprar</button>
         </div>

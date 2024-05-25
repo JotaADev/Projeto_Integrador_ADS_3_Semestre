@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { collection, query, getDocs } from "firebase/firestore";
 import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAsjcJYrBlQ0DedcKcjAbewkIKduPWjBps",
@@ -60,4 +63,22 @@ export function getBannersMobile() {
             reject(error);
         });
     });
+}
+
+// Obtendo dados dos produtos
+const db = getFirestore();
+const q = query(collection(db, "produtos"));
+export const querySnapshot = await getDocs(q);
+
+// Login do Firebase Administrador
+const auth = getAuth();
+
+export function signupAdmin(email, password) {
+    return signInWithEmailAndPassword(auth, email, password).then((userCredential) => {
+        const user = userCredential.user.accessToken;
+        localStorage.setItem("TokenAdmin", user)
+        return true;
+    }).catch((error) => {
+        return false;
+    })
 }
