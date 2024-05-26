@@ -1,8 +1,6 @@
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './SwiperCampaign.css';
-
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 

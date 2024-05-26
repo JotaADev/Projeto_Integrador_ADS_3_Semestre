@@ -1,13 +1,16 @@
 import React from 'react';
 import './Header.css';
 
-//Icons:
-import SearchBar from '../SearchBar/SearchBar';
+// =========== Icones importados ===========
 import { FiPhone } from "react-icons/fi";
 import { FiUser } from "react-icons/fi";
 import { BsBag } from "react-icons/bs";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
+
+
+// =========== Componentes importados ===========
+import SearchBar from '../SearchBar/SearchBar';
 import NavBarMobile from '../NavBarMobile/NavBarMobile';
 
 const Header = () => {

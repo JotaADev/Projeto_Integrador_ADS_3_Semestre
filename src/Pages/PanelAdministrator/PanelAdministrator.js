@@ -1,6 +1,9 @@
-import React from 'react';
+import React from "react";
 import './PanelAdministrator.css';
 import { useNavigate } from 'react-router-dom';
+
+// =========== Componentes importados ===========
+import AddProductForm from '../../components/AddProductForm/AddProductForm';
 
 const PanelAdministrator = () => {
 
@@ -19,7 +22,11 @@ const PanelAdministrator = () => {
 
     return (
         <>
-            <button onClick={Logout}>Logout</button>
+            <section id="area1">
+                <AddProductForm/>
+                <button onClick={Logout}>Logout</button>
+            </section>
+            
         </>
     );
 }

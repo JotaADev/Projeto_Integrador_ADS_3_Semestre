@@ -1,42 +1,16 @@
-#login {
-    width: 100%;
+#area1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-#login img {
-    width: 200px;
-    margin-bottom: 2rem;
-}
-
-#login form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#login form input {
-    width: 300px;
-    height: 40px;
-    border: 1px solid #363636;
-    border-radius: 0.7rem;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-#login form input::placeholder {
-    color: #363636;
-}
-
-#login form button {
-    width: 200px;
-    height: 40px;
+#area1 button {
+    width: 20%;
+    height: 50px;
     margin: 1rem;
-    background-color: #C08497;
+    background-color: #363636;
     border: none;
     border-radius: 1rem;
     color: #FFFFFF;
@@ -45,20 +19,7 @@
     transition: 0.3s ease-in;
 }
 
-#login form button:hover {
-    background-color: #B0E0E6;
+#area1 button:hover {
+    background-color: #BDB76B ;
     color: #000000;
-}
-
-#login div {
-    display: none;
-}
-
-#login div p {
-    color: #FF0000;
-    font-weight: bold;
-}
-
-.show-error {
-    display: block !important;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import './NavBarMobile.css';
 import NavBarButton from '../NavBarButton/NavBarButton';
 
-//Icons:
+// =========== Icones importados ===========
 import { FiUser } from "react-icons/fi";
 import { CiGift } from "react-icons/ci";
 import { TbBasketStar } from "react-icons/tb";

@@ -1,11 +1,19 @@
-import React from 'react';
+import React from "react";
 import './Home.css';
+
+// =========== Icones importados ===========
 import { IoLogoWhatsapp } from "react-icons/io";
-import Header from '../../Components/Header/Header';
-import NavBar from '../../Components/NavBar/NavBar';
-import SwiperCampaign from '../../Components/SwiperCampaign/SwiperCampaign';
-import ProductCard from '../../Components/ProductCard/ProductCard';
-import { getBanners, getBannersMobile, querySnapshot } from '../../Firebase/config';
+
+// =========== Componentes importados ===========
+import Header from '../../components/Header/Header';
+import NavBar from '../../components/NavBar/NavBar';
+import SwiperCampaign from '../../components/SwiperCampaign/SwiperCampaign';
+import ProductCard from '../../components/ProductCard/ProductCard';
+
+// =========== Funções importadas ===========
+import getBanners from '../../firebase/getBanners';
+import getBannersMobile from '../../firebase/getBannersMobile';
+import getProducts from '../../firebase/getProducts';
 
 const Home = () => {
 
@@ -26,10 +34,11 @@ const Home = () => {
                 console.error("Failed to fetch banners:", error);
             });
         }
-    };
+    }
 
     React.useEffect(() => {
         const fetchProducts = async () => {
+            const querySnapshot = await getProducts();
             const productsArray = querySnapshot.docs.map(doc => ({
                 id: doc.id,
                 img: doc.data().imagem_produto,
@@ -42,18 +51,17 @@ const Home = () => {
         }
 
         fetchProducts();
-
         updateBanners();
 
         const handleResize = () => {
             updateBanners();
-        };
+        }
 
         window.addEventListener('resize', handleResize);
 
         return () => {
             window.removeEventListener('resize', handleResize);
-        };
+        }
     }, []);
 
     return (
@@ -81,7 +89,6 @@ const Home = () => {
                 </div>
             </main>
         </>
-        
     );
 }
 
