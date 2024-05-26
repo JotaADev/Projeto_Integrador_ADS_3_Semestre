@@ -3,9 +3,9 @@ import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 // =========== Páginas importadas ===========
-import Home from "./pages/Home/Home";
-import PanelAdministratorLogin from "./pages/PanelAdministratorLogin/PanelAdministratorLogin";
-import PanelAdministrator from "./pages/PanelAdministrator/PanelAdministrator";
+import Home from "./Pages/Home/Home";
+import PanelAdministratorLogin from "./Pages/PanelAdministratorLogin/PanelAdministratorLogin";
+import PanelAdministrator from "./Pages/PanelAdministrator/PanelAdministrator";
 
 //// =========== Componente de rotas ===========
 const router = createBrowserRouter([

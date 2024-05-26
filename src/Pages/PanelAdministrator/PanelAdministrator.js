@@ -3,7 +3,7 @@ import './PanelAdministrator.css';
 import { useNavigate } from 'react-router-dom';
 
 // =========== Componentes importados ===========
-import AddProductForm from '../../components/AddProductForm/AddProductForm';
+import AddProductForm from '../../Components/AddProductForm/AddProductForm';
 
 const PanelAdministrator = () => {
 

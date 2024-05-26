@@ -5,10 +5,10 @@ import './Home.css';
 import { IoLogoWhatsapp } from "react-icons/io";
 
 // =========== Componentes importados ===========
-import Header from '../../components/Header/Header';
-import NavBar from '../../components/NavBar/NavBar';
-import SwiperCampaign from '../../components/SwiperCampaign/SwiperCampaign';
-import ProductCard from '../../components/ProductCard/ProductCard';
+import Header from '../../Components/Header/Header';
+import NavBar from '../../Components/NavBar/NavBar';
+import SwiperCampaign from '../../Components/SwiperCampaign/SwiperCampaign';
+import ProductCard from '../../Components/ProductCard/ProductCard';
 
 // =========== Funções importadas ===========
 import getBanners from '../../firebase/getBanners';
