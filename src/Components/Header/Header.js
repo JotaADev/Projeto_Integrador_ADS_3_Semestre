@@ -1,5 +1,7 @@
 import React from 'react';
 import './Header.css';
+import logo from './logo.png';
+import { useParams } from 'react-router-dom';
 
 // =========== Icones importados ===========
 import { FiPhone } from "react-icons/fi";
@@ -15,12 +17,22 @@ import NavBarMobile from '../NavBarMobile/NavBarMobile';
 
 const Header = () => {
 
+    const { categoria } = useParams();
+
     const [toggle, setToggle] = React.useState(false);
 
     function toggleHamburguer (e) {
         e.preventDefault();
         setToggle(!toggle);
     }
+
+    React.useEffect(() => {
+        const reloadPage = async () => {
+            setToggle(false)
+        }
+
+        reloadPage();
+    },[categoria]);
 
     return (
         <>
@@ -29,7 +41,7 @@ const Header = () => {
                     <button id='bars' onClick={toggleHamburguer}>
                         {toggle ? <IoCloseSharp size={'30px'}/> : <FaBars size={'30px'}/>}
                     </button>
-                    <a href='/'><img id='logo' src='./logo.png'/></a>
+                    <a href='/'><img id='logo' src={logo}/></a>
                     <button><BsBag size={'30px'}/></button>
                 </div>
                 <SearchBar/>

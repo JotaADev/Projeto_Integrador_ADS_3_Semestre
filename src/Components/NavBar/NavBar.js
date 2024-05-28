@@ -1,16 +1,17 @@
 import React from 'react';
 import './NavBar.css';
+import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     return (
         <nav>
-            <a href='/'>Presentes</a>
-            <a href='/'>Cestas</a>
-            <a href='/'>Buquês</a>
-            <a href='/'>Arranjos</a>
-            <a href='/'>Tipos de Flores</a>
-            <a href='/'>Datas Especiais</a>
-            <a className='promotions' href='/'>Ofertas 24H</a>
+            <Link to='/produtos/presente'>Presentes</Link>
+            <Link to='/produtos/cesta'>Cestas</Link>
+            <Link to='/produtos/buque'>Buquês</Link>
+            <Link to='/produtos/arranjo'>Arranjos</Link>
+            <Link to='/'>Tipos de Flores</Link>
+            <Link to='/'>Datas Especiais</Link>
+            <Link to='/' className='promotions'>Ofertas 24H</Link>
         </nav>
     );
 }

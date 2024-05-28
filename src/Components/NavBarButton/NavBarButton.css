@@ -1,5 +1,9 @@
-.navbarbtn {
+.containernavbarbtn {
     width: 90%;
+}
+
+.navbarbtn {
+    width: 100%;
     min-height: 50px;
     border: none;
     border-radius: 0.4rem;

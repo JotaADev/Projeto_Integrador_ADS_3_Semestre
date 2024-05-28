@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home/Home";
 import PanelAdministratorLogin from "./Pages/PanelAdministratorLogin/PanelAdministratorLogin";
 import PanelAdministrator from "./Pages/PanelAdministrator/PanelAdministrator";
+import ProductsByCategory from "./Pages/ProductsByCategory/ProductsByCategory";
 
 //// =========== Componente de rotas ===========
 const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
     {
         path: 'panel-admin',
         element: <PanelAdministrator/>,
+    },
+    {
+        path: 'produtos/:categoria',
+        element: <ProductsByCategory/>,
     },
 ])
 

@@ -12,35 +12,43 @@ import { GiFlowers } from "react-icons/gi";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
 const NavBarMobile = ({classToggle}) => {
+
     return (
         <aside className={classToggle}>
             <NavBarButton
                 icon={<FiUser size={'1.5rem'}/>}
                 text={'Entre ou cadastre-se'}
+                link={'/'}
             />
             <NavBarButton
                 icon={<CiGift size={'1.5rem'}/>}
                 text={'Presentes'}
+                link={'/produtos/presente'}
             />
             <NavBarButton
                 icon={<TbBasketStar size={'1.5rem'}/>}
                 text={'Cestas'}
+                link={'/produtos/cesta'}
             />
             <NavBarButton
                 icon={<LuFlower2 size={'1.5rem'}/>}
                 text={'Buquês'}
+                link={'/produtos/buque'}
             />
             <NavBarButton
                 icon={<GiFlowerPot size={'1.5rem'}/>}
                 text={'Arranjos'}
+                link={'/produtos/arranjo'}
             />
             <NavBarButton
                 icon={<GiFlowers size={'1.5rem'}/>}
                 text={'Tipo de flores'}
+                link={'/'}
             />
             <NavBarButton
                 icon={<FaRegCalendarAlt size={'1.5rem'}/>}
                 text={'Datas especiais'}
+                link={'/'}
             />
         </aside>
     );

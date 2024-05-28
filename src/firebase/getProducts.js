@@ -1,10 +1,12 @@
-import { getFirestore, query, collection, getDocs } from "firebase/firestore";
+import { getFirestore, query, collection, getDocs, where } from "firebase/firestore";
 import app from "./settings";
 
 const db = getFirestore(app);
 
-async function getProducts() {
-    const q = query(collection(db, "produtos"));
+async function getProducts(category) {
+    const q = category
+        ? query(collection(db, "produtos"), where("categoria", "==", category))
+        : query(collection(db, "produtos"));
     const querySnapshot = await getDocs(q);
     return querySnapshot
 }

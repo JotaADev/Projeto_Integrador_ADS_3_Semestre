@@ -73,6 +73,18 @@ const Home = () => {
             </button>
             <main>
                 <SwiperCampaign campaign={imgs}/>
+                <div className="infoarea">
+                    <div className="infodelivery">
+                        <p>Entrega em até 3 horas</p>
+                    </div>
+                    <div className="infoprice">
+                        <p>Escolha por valores</p>
+                        <a href="/">Até R$ <span>99</span></a>
+                        <a href="/">Até R$ <span>150</span></a>
+                        <a href="/">Até R$ <span>200</span></a>
+                        <a href="/">Acima de R$ <span>200</span></a>
+                    </div>
+                </div>
                 <div className='flowersgroup'>
                     {
                         products.map((product) => (
