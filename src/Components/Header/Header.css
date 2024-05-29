@@ -40,6 +40,14 @@ header {
     justify-content: space-between;
 }
 
+.buttons button {
+    background-color: #FFFFFF;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 @media (max-width: 859px) {
     header {
         height: 20%;

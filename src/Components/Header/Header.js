@@ -14,16 +14,23 @@ import { IoCloseSharp } from "react-icons/io5";
 // =========== Componentes importados ===========
 import SearchBar from '../SearchBar/SearchBar';
 import NavBarMobile from '../NavBarMobile/NavBarMobile';
+import AuthModal from '../AuthModal/AuthModal';
 
 const Header = () => {
 
     const { categoria } = useParams();
 
     const [toggle, setToggle] = React.useState(false);
+    const [loginToggle, setLoginToggle] = React.useState(false);
 
     function toggleHamburguer (e) {
         e.preventDefault();
         setToggle(!toggle);
+    }
+
+    function toggleAuth (e) {
+        e.preventDefault();
+        setLoginToggle(!loginToggle);
     }
 
     React.useEffect(() => {
@@ -53,11 +60,14 @@ const Header = () => {
                     </div>
                 </div>
                 <div className='buttons'>
-                    <FiUser style={{cursor: 'pointer'}} size={'30px'}/>
+                    <button onClick={toggleAuth}>
+                        <FiUser style={{cursor: 'pointer'}} size={'30px'}/>
+                    </button>
                     <BsBag style={{cursor: 'pointer'}} size={'30px'}/>
                 </div>
             </header>
             <NavBarMobile classToggle={toggle ? 'show' : 'close'}/>
+            <AuthModal authToggle={loginToggle ? 'show' : 'close'}/>
         </>
     );
 }

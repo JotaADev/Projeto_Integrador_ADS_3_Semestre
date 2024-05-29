@@ -1,0 +1,107 @@
+#authmodal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #FFFFFF;
+    border-radius: 1rem;
+    top: 0;
+    padding: 2rem;
+    z-index: 100;
+    display: flex;
+}
+
+#authmodal div, #authmodal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#authmodal div h2 {
+    font-size: 2rem;
+    font-weight: lighter;
+    margin-bottom: 1rem;
+}
+
+#authmodal input {
+    width: 40%;
+    height: 40px;
+    border-radius: 0.4rem;
+    border: 1px solid #363636;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+#authmodal button {
+    width: 30%;
+    height: 40px;
+    border: none;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    background-color: #C08497;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    transition: 0.3s ease-in;
+}
+
+#authmodal button:hover {
+    background-color: #B0E0E6;
+    color: #000000;
+}
+
+#authmodal a {
+    color: #C08497;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in;
+}
+
+#authmodal a:hover {
+    color: #B0E0E6;
+}
+
+#authmodal > div > div {
+    display: none;
+
+}
+
+#authmodal > div > div > p {
+    color: #FF0000;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.showerrorloginuser {
+    display: flex !important;
+}
+
+.show {
+    display: flex !important;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.close {
+    display: none !important;
+}
+
+@media (max-width: 859px) {
+    #authmodal input {
+        width: 90%;
+        height: 40px;
+    }
+    
+    #authmodal button {
+        width: 50%;
+        height: 40px;
+        border: none;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        background-color: #C08497;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+        transition: 0.3s ease-in;
+    }
+}
