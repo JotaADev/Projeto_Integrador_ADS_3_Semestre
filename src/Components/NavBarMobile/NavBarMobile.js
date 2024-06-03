@@ -1,6 +1,7 @@
 import React from 'react';
 import './NavBarMobile.css';
 import NavBarButton from '../NavBarButton/NavBarButton';
+import { LoginContext } from '../../context';
 
 // =========== Icones importados ===========
 import { FiUser } from "react-icons/fi";
@@ -13,12 +14,19 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 
 const NavBarMobile = ({classToggle}) => {
 
+    const { loginToggle, setLoginToggle } = React.useContext(LoginContext);
+
+    function toggleAuth (e) {
+        e.preventDefault();
+        setLoginToggle(!loginToggle);
+    }
+
     return (
         <aside className={classToggle}>
             <NavBarButton
                 icon={<FiUser size={'1.5rem'}/>}
                 text={'Entre ou cadastre-se'}
-                link={'/'}
+                action={toggleAuth}
             />
             <NavBarButton
                 icon={<CiGift size={'1.5rem'}/>}

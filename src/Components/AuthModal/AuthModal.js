@@ -9,8 +9,6 @@ const AuthModal = ({authToggle}) => {
     const [isLogin, setIsLogin] = useState(true);
     const toggleForm = () => setIsLogin(!isLogin);
 
-    const [error, setError] = React.useState(null);
-
     const [name, setName] = React.useState('');
     const [cpf, setCpf] = React.useState('');
     const [email, setEmail] = React.useState('');
@@ -25,7 +23,7 @@ const AuthModal = ({authToggle}) => {
         e.preventDefault();
         try {
             await createUser(name, cpf, email, phone, address, state, city, cep);
-            await createUserAuth(email, password)
+            await createUserAuth(email, password);
             setName('');
             setCpf('');
             setEmail('');
@@ -35,9 +33,8 @@ const AuthModal = ({authToggle}) => {
             setCity('');
             setCep('');
             setPassword('');
-            setError(null);
         } catch (err) {
-            setError(err.message);
+            window.alert(err);
         }
     }
 
@@ -108,7 +105,6 @@ const AuthModal = ({authToggle}) => {
                         <button type="submit">Cadastrar</button>
                     </form>
                     <p>Já tem conta? <a onClick={toggleForm}>Clique aqui</a></p>
-                    {error && <div>{error}</div>}
                 </div>
             )}
         </div>

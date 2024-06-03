@@ -14,6 +14,8 @@ import ProductCard from '../../Components/ProductCard/ProductCard';
 import getBanners from '../../firebase/getBanners';
 import getBannersMobile from '../../firebase/getBannersMobile';
 import getProducts from '../../firebase/getProducts';
+import Footer from "../../Components/Footer/Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
 
@@ -79,10 +81,10 @@ const Home = () => {
                     </div>
                     <div className="infoprice">
                         <p>Escolha por valores</p>
-                        <a href="/">Até R$ <span>99</span></a>
-                        <a href="/">Até R$ <span>150</span></a>
-                        <a href="/">Até R$ <span>200</span></a>
-                        <a href="/">Acima de R$ <span>200</span></a>
+                        <Link to='/produtos-por-preco/99'>Até R$ <span>99</span></Link>
+                        <Link to='/produtos-por-preco/150'>Até R$ <span>150</span></Link>
+                        <Link to='/produtos-por-preco/200'>Até R$ <span>200</span></Link>
+                        <Link to='/produtos-por-preco/201'>Acima de R$ <span>200</span></Link>
                     </div>
                 </div>
                 <div className='flowersgroup'>
@@ -99,6 +101,7 @@ const Home = () => {
                         ))
                     }
                 </div>
+                <Footer/>
             </main>
         </>
     );

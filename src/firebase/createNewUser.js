@@ -7,13 +7,12 @@ const auth = getAuth(app);
 
 export async function createUserAuth(email, password) {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        const user = userCredential.user.uid;
-        return user;
+    .then(() => {
+        window.alert("Cadastro realizado com sucesso!");
+        window.location.reload();
     })
     .catch((error) => {
-        const errorMessage = error.message;
-        return errorMessage
+        throw new Error(error.message);
     });
 }
 

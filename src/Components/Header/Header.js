@@ -2,6 +2,7 @@ import React from 'react';
 import './Header.css';
 import logo from './logo.png';
 import { useParams } from 'react-router-dom';
+import { LoginContext } from '../../context';
 
 // =========== Icones importados ===========
 import { FiPhone } from "react-icons/fi";
@@ -21,7 +22,7 @@ const Header = () => {
     const { categoria } = useParams();
 
     const [toggle, setToggle] = React.useState(false);
-    const [loginToggle, setLoginToggle] = React.useState(false);
+    const { loginToggle, setLoginToggle } = React.useContext(LoginContext);
 
     function toggleHamburguer (e) {
         e.preventDefault();

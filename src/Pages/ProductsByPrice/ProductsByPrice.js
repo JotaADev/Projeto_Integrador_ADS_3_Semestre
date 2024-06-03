@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import './ProductsByCategory.css';
+import './ProductsByPrice.css';
 
 // =========== Icones importados ===========
 import { IoLogoWhatsapp } from "react-icons/io";
@@ -14,15 +14,16 @@ import Footer from '../../Components/Footer/Footer';
 // =========== Funções importadas ===========
 import getProducts from '../../firebase/getProducts';
 
-const ProductsByCategory = () => {
+const ProductsByPrice = () => {
 
-    const { categoria } = useParams();
+    const { preco } = useParams();
+    const precoNumero = Number(preco);
 
     const [products, setProducts] = React.useState([]);
 
     React.useEffect(() => {
         const fetchProducts = async () => {
-            const querySnapshot = await getProducts("categoria", "==", categoria);
+            const querySnapshot = await getProducts("preco_atual", precoNumero == 201 ? '>' : '<' , precoNumero);
             const productsArray = querySnapshot.docs.map(doc => ({
                 id: doc.id,
                 img: doc.data().imagem_produto,
@@ -34,8 +35,7 @@ const ProductsByCategory = () => {
         }
 
         fetchProducts();
-    },[categoria]);
-
+    },[precoNumero]);
 
     return (
         <>
@@ -45,7 +45,7 @@ const ProductsByCategory = () => {
                 <IoLogoWhatsapp size={'60px'}/>
             </button>
             <main>
-                <h1 className='title'>{categoria + 's'}</h1>
+                <h1 className='title'>{`Produtos ${precoNumero == 201 ? 'acima de' : 'até'} R$ ${precoNumero == 201 ? '200' : precoNumero}`}</h1>
                 <div className='flowersgroup'>
                     {
                         products.map((product) => (
@@ -66,4 +66,4 @@ const ProductsByCategory = () => {
     );
 }
 
-export default ProductsByCategory;
+export default ProductsByPrice;

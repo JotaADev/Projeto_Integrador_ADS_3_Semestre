@@ -3,9 +3,9 @@ import app from "./settings";
 
 const db = getFirestore(app);
 
-async function getProducts(category) {
-    const q = category
-        ? query(collection(db, "produtos"), where("categoria", "==", category))
+async function getProducts(camp, operation, value) {
+    const q = value
+        ? query(collection(db, "produtos"), where(camp, operation, value))
         : query(collection(db, "produtos"));
     const querySnapshot = await getDocs(q);
     return querySnapshot
