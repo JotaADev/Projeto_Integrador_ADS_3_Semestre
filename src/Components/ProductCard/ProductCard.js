@@ -1,9 +1,9 @@
 import React from 'react';
 import './ProductCard.css';
 
-const ProductCard = ({img, productName, oldPrice, price, payment}) => {
+const ProductCard = ({img, productName, oldPrice, price, payment, propFunction}) => {
     return (
-        <div className='productcard'>
+        <div className='productcard' onClick={propFunction}>
             <img src={img}/>
             <p>{productName}</p>
             <div>

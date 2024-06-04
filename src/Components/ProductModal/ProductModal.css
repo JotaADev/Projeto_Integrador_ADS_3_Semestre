@@ -1,0 +1,142 @@
+#productmodal {
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    position: absolute;
+    background-color: #FFFFFF;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.show {
+    display: flex !important;
+}
+
+.close {
+    display: none !important;
+}
+
+#productmodal > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-bottom: 2rem;
+}
+
+#productmodal > div:nth-child(1) svg {
+    cursor: pointer;
+}
+
+#productmodal > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+}
+
+#productmodal > div:nth-child(2) > img {
+    width: 40%;
+    max-height: 100%;
+}
+
+#productmodal > div:nth-child(2) > div {
+    width: 50%;
+}
+
+#productmodal > div:nth-child(2) > div > h3 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(2) > p:nth-child(1) {
+    text-decoration:line-through;
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin: 0 0.5rem;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(2) > p:nth-child(2) {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(2) > p:nth-child(3) {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin: 0 0.5rem;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(3) > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #363636;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    width: 40%;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(3) > div svg {
+    cursor: pointer;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(3) > div > input[type=text] {
+    width: 70%;
+    height: 40px;
+    margin: 0 0.4rem;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(3) > button {
+    width: 50%;
+    height: 50px;
+    background-color: #C08497;
+    border: none;
+    border-radius: 0.7rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+#productmodal > div:nth-child(2) > div > div:nth-child(3) > button:hover {
+    background-color: #B0E0E6;
+    color: #000000;
+}
+
+@media (max-width: 859px) {
+    #productmodal > div:nth-child(2) {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #productmodal > div:nth-child(2) > img {
+        margin-bottom: 2rem;
+        width: 70%;
+    }
+
+    #productmodal > div:nth-child(2) > div {
+        width: 100%;
+        margin-top: 2rem;
+    }
+}
