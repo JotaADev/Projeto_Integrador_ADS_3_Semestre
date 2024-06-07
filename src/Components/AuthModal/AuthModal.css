@@ -6,7 +6,7 @@
     border-radius: 1rem;
     top: 0;
     padding: 2rem;
-    z-index: 100;
+    z-index: 4;
     display: flex;
 }
 
