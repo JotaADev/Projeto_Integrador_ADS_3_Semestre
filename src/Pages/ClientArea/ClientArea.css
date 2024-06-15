@@ -1,0 +1,36 @@
+.noFinalized {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.logout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.logout button {
+    width: 20%;
+    height: 50px;
+    margin: 1rem;
+    background-color: #363636;
+    border: none;
+    border-radius: 1rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.logout button:hover {
+    background-color: #BDB76B ;
+    color: #000000;
+}
+
+@media (max-width: 859px) {
+    .logout button {
+        width: 60%;
+    }
+}

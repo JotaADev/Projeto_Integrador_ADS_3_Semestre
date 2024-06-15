@@ -1,0 +1,142 @@
+#checkout {
+    height: 100%;
+}
+
+#checkout > a {
+    display: block;
+    text-decoration: none;
+    margin-top: 2rem;
+    text-align: center;
+    color: #C08497;
+}
+
+#checkout > h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#checkout > p:nth-child(2) {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+#checkout > div.checkout-adress > p > span{
+    font-weight: bold;
+}
+
+#checkout > p:nth-child(4) {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+div.checkout-products {
+    display: flex;
+    margin: 1rem 0;
+}
+
+div.checkout-products > div:nth-child(1) {
+    width: 50%;
+    margin-right: 2rem;
+}
+
+div.checkout-products > div:nth-child(1) > p {
+    font-size: 1.2rem;
+}
+
+div.checkout-products > div:nth-child(1) > div {
+    display: flex;
+}
+
+div.checkout-products > div:nth-child(1) > div > p{
+    font-size: 0.9rem;
+}
+
+div.checkout-products > div:nth-child(1) > div > p:nth-child(2) {
+    margin-left: 2rem;
+}
+
+div.checkout-products > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    width: 20%;
+}
+
+div.checkout-products > div:nth-child(3) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkout > div.checkout-resume > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #a1a1a1;
+    margin: 1rem 0;
+}
+
+#checkout > div.checkout-resume > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border: 1px solid #a1a1a1;
+    margin: 1rem 0;
+}
+
+#checkout > p.checkout-method {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.button-checkout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkout > div.button-checkout > button {
+    width: 80%;
+    height: 60px;
+    margin-top: 1rem;
+    background-color: #C08497;
+    border: none;
+    border-radius: 1rem;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+#checkout > div.button-checkout > button:hover {
+    background-color: #B0E0E6;
+    color: #000000;
+}
+
+@media (max-width: 859px) {
+    #checkout > h1 {
+        text-align: center;
+    }
+
+    #checkout > div.checkout-products > div:nth-child(1) {
+        width: 70%;
+        margin-right: 0;
+    }
+
+    #checkout > div.checkout-products > div:nth-child(1) p {
+        font-size: 1rem;
+    }
+
+    #checkout > div.checkout-products > div:nth-child(2) {
+        margin: 0 1rem;
+    }
+
+    #checkout > a {
+        margin-bottom: 2rem;
+    }
+}

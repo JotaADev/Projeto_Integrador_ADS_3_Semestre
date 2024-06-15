@@ -1,7 +1,7 @@
 import React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { LoginProvider } from "./context";
+import { AppProvider } from "./context";
 
 // =========== Páginas importadas ===========
 import Home from "./Pages/Home/Home";
@@ -10,6 +10,7 @@ import PanelAdministrator from "./Pages/PanelAdministrator/PanelAdministrator";
 import ProductsByCategory from "./Pages/ProductsByCategory/ProductsByCategory";
 import ClientArea from "./Pages/ClientArea/ClientArea";
 import ProductsByPrice from "./Pages/ProductsByPrice/ProductsByPrice";
+import Checkout from "./Pages/Checkout/Checkout";
 
 //// =========== Componente de rotas ===========
 const router = createBrowserRouter([
@@ -37,12 +38,16 @@ const router = createBrowserRouter([
         path: 'produtos-por-preco/:preco',
         element: <ProductsByPrice/>,
     },
+    {
+        path: 'checkout',
+        element: <Checkout/>,
+    },
 ])
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <LoginProvider>
+        <AppProvider>
             <RouterProvider router={router}/>
-        </LoginProvider>
+        </AppProvider>
     </React.StrictMode>
 )

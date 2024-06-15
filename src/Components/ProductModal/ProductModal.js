@@ -1,5 +1,6 @@
 import React from 'react';
 import './ProductModal.css';
+import { AppContext } from '../../context';
 
 // =========== Icones importados ===========
 import { IoCloseSharp } from 'react-icons/io5';
@@ -9,6 +10,12 @@ import { IoMdAdd } from "react-icons/io";
 const ProductModal = ({img, productName, oldPrice, price, payment, classStyle, manipToggle}) => {
 
     let [qtd, setQtd] = React.useState(1);
+    const { addToCart } = React.useContext(AppContext);
+
+    const handleAddToCart = () => {
+        const product = { productName, price, qtd };
+        addToCart(product);
+    };
 
     return (
         <div id='productmodal' className={classStyle}>
@@ -30,7 +37,7 @@ const ProductModal = ({img, productName, oldPrice, price, payment, classStyle, m
                             <input type='text' value={qtd} disabled/>
                             <IoMdAdd onClick={() => {setQtd(qtd+1)}}/>
                         </div>
-                        <button>Adicionar ao carrinho</button>
+                        <button onClick={handleAddToCart}>Adicionar ao carrinho</button>
                     </div>
                 </div>
             </div>

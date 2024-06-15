@@ -7,7 +7,7 @@ header {
 .mobile {
     height: 100%;
     margin-bottom: 0;
-    z-index: 2;
+    z-index: 3;
 }
 
 .mobile button {
@@ -33,7 +33,6 @@ header {
 }
 
 .buttons {
-    width: 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,6 +44,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 2rem;
 }
 
 @media (max-width: 859px) {

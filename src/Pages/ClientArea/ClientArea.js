@@ -2,6 +2,12 @@ import React from 'react';
 import './ClientArea.css';
 import { useNavigate } from 'react-router-dom';
 
+// =========== Componentes importados ===========
+import Header from '../../Components/Header/Header';
+
+// =========== Icones importados ===========
+import { IoLogoWhatsapp } from "react-icons/io";
+
 const ClientArea = () => {
 
     const navigate = useNavigate();
@@ -12,8 +18,25 @@ const ClientArea = () => {
         }
     },[navigate])
 
+    const logout = () => {
+        localStorage.removeItem("Email");
+        localStorage.removeItem("TokenUser");
+        window.location.reload();
+    }
+
     return (
-        <div>Área do cliente em desenvolvimento...</div>
+        <>
+            <Header/>
+            <button onClick={() => {window.open('https://wa.me/5511977087265', '_blank')}} className='whatsappicon'>
+                <IoLogoWhatsapp size={'60px'}/>
+            </button>
+            <main>
+                <p className='noFinalized'>Area do cliente em desenvolvimento</p>
+                <div className='logout'>
+                    <button onClick={() => {logout()}}>Logout</button>
+                </div>
+            </main>
+        </>
     );
 }
 
